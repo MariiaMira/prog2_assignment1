@@ -8,7 +8,4 @@ public class CompactDisc extends Recording{
         return "CD";
     }
 
-    public double getVat(){
-    }
-
 }

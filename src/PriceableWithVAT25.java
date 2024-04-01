@@ -1,5 +1,5 @@
-interface PriceableWithVAT25 extends Priceable{
-    default double getVat(){
+interface PriceableWithVAT25 extends Priceable {
+    default double getVAT() {
         return 0.25;
     }
 }
