@@ -10,7 +10,7 @@ public abstract class Recording extends Item{
         this.artist = artist;
         this.year = year;
 
-4
+
         this.condition = condition; // värde mellan 0-10
         this.price = price;
     }
