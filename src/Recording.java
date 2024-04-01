@@ -6,11 +6,11 @@ public abstract class Recording extends Item{
     private double price;
 
     protected Recording(String name, String artist, int year, int condition, double price){
-        this.name = name;
+        super(name);
         this.artist = artist;
         this.year = year;
 
-
+4
         this.condition = condition; // värde mellan 0-10
         this.price = price;
     }
