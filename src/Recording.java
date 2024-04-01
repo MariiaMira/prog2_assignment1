@@ -1,5 +1,4 @@
 public abstract class Recording extends Item{
-    private String name;
     private String artist;
     private int year;
     private int condition;
@@ -10,13 +9,12 @@ public abstract class Recording extends Item{
         this.artist = artist;
         this.year = year;
 
+        if(condition >= 0 && condition <= 10){
+            this.condition = condition; // värde mellan 0-10
+        }else{
+            throw new IllegalArgumentException();
+        }
 
-        this.condition = condition; // värde mellan 0-10
         this.price = price;
     }
-
-
-
-
-
 }
