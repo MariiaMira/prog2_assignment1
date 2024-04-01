@@ -29,8 +29,8 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
     }
 
     public double getPrice(){
-        return this.price;
-    } // använd interface? / TODO gör calc
+        return Math.max((this.price * (this.condition / 10.0)), 10);
+    } // TODO använd interface?
 
     public String toString(){
         return " ";
