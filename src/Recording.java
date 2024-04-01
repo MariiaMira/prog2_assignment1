@@ -30,11 +30,12 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
 
     public double getPrice(){
         return Math.max((this.price * (this.condition / 10.0)), 10);
-    } // TODO använd interface?
+    }
 
     public String toString(){
-        return " ";
-    } //TODO
+        return String.format("Recording { name='%s', artist='%s', year=%b, condition=%d price=%.1f, price+vat=%.1f }",
+                getName(), getArtist(), getYear(), getCondition(), getOriginalPrice(), getPriceWithVAT());
+    }
 
     public int getYear(){
         return this.year;
