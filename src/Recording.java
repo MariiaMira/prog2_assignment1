@@ -1,8 +1,8 @@
-public abstract class Recording extends Item{
-    private String artist;
-    private int year;
+public abstract class Recording extends Item implements PriceableWithVAT25{
+    private final String artist;
+    private final int year;
     private int condition;
-    private double price;
+    private final double price;
 
     protected Recording(String name, String artist, int year, int condition, double price){
         super(name);
@@ -16,6 +16,32 @@ public abstract class Recording extends Item{
         }
 
         this.price = price;
+    }
+
+    public String getArtist(){
+        return this.artist;
+    }
+
+    public abstract String getType();
+
+    public int getCondition(){
+        return this.condition;
+    }
+
+    public double getPrice(){
+        return this.price;
+    } // använd interface? / TODO gör calc
+
+    public String toString(){
+        return " ";
+    } //TODO
+
+    public int getYear(){
+        return this.year;
+    }
+
+    protected double getOriginalPrice(){
+        return this.price;
     }
 
 }
