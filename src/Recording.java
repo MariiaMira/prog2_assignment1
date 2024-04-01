@@ -44,5 +44,4 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
     protected double getOriginalPrice(){
         return this.price;
     }
-
 }
