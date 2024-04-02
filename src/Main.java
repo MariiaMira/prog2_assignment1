@@ -1,3 +1,5 @@
+
+/*
 public class Main {
     public static void main(String[] args) {
 
@@ -51,6 +53,7 @@ public class Main {
         Total incl. VAT: 631,3
         -----------
 		*/
-
+/*
     }
 }
+*/
