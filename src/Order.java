@@ -7,7 +7,7 @@ public class Order{
     private final List<Item> items = new ArrayList<>();
     
     public Order(Item...items){ // Item...items
-        counter = counter++;
+        counter = ++counter;
         orderNumber = counter;
         for(Item i: items){
             this.items.add(i);
@@ -24,29 +24,20 @@ public class Order{
         return receipt;
     }
 
-    /*public double getTotalValue(){
+    public double getTotalValue(){
         double value = 0.00;
         for(Item i: items){
-            value =+ i.getPrice();
+            value += i.getPrice();
         }
         return value;
-    }*/
-
-    public double getTotalValue() {
-        double total = 0;
-        for (Item item : items) {
-            total += item.getPrice();
-        }
-        return total;
     }
 
-
     public double getTotalValuePlusVAT(){
-        double total = 0.00;
+        double value = 0.00;
         for(Item i: items){
-            total += i.getPriceWithVAT();
+            value += i.getPriceWithVAT();
         }
-        return total;
+        return value;
 
     }
 

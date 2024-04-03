@@ -4,10 +4,12 @@ public class LongPlay extends Recording {
         super(name, artist, year, condition, price);
     }
 
+    @Override
     public String getType(){
         return "LP";
     }
 
+    @Override
     public double getPrice(){
         return Math.max((getOriginalPrice() * (getCondition() / 10.0) + (2024-getYear())*5.0), 10);
     }

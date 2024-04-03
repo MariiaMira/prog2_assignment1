@@ -9,6 +9,7 @@ public class Book extends Item implements PriceableWithVAT6{
         this.price = price;
         this.bound = bound;
     }
+
     public double getPrice(){
         return bound ? price * 1.3 : price;
     }
