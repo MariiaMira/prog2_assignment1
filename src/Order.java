@@ -6,7 +6,7 @@ public class Order{
     private static long counter;
     private final List<Item> items = new ArrayList<>();
     
-    public Order(Item[] items){
+    public Order(Item[] items){ // Item...items
         counter = counter++;
         orderNumber = counter;
         for(Item i: items){
