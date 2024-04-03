@@ -10,7 +10,7 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
         this.year = year;
 
         if(condition >= 0 && condition <= 10){
-            this.condition = condition; // värde mellan 0-10
+            this.condition = condition;
         }else{
             throw new IllegalArgumentException();
         }
