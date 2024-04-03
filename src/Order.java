@@ -24,20 +24,29 @@ public class Order{
         return receipt;
     }
 
-    public double getTotalValue(){
+    /*public double getTotalValue(){
         double value = 0.00;
         for(Item i: items){
             value =+ i.getPrice();
         }
         return value;
+    }*/
+
+    public double getTotalValue() {
+        double total = 0;
+        for (Item item : items) {
+            total += item.getPrice();
+        }
+        return total;
     }
 
+
     public double getTotalValuePlusVAT(){
-        double value = 0.00;
+        double total = 0.00;
         for(Item i: items){
-            value =+ i.getPriceWithVAT();
+            total += i.getPriceWithVAT();
         }
-        return value;
+        return total;
 
     }
 
